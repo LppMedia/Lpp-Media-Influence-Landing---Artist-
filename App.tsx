@@ -615,7 +615,7 @@ export default function App() {
               <img 
                 src="https://res.cloudinary.com/dmkx2uowd/image/upload/v1765390696/Dise%C3%B1o_sin_t%C3%ADtulo_4_o12q0c.png" 
                 alt="Instagram" 
-                className="w-8 h-8 object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                className="w-10 h-10 object-contain opacity-70 hover:opacity-100 transition-opacity" 
               />
             </a>
             <a 
@@ -628,7 +628,7 @@ export default function App() {
               <img 
                 src="https://res.cloudinary.com/dmkx2uowd/image/upload/v1765390694/Dise%C3%B1o_sin_t%C3%ADtulo_5_vgbrtw.png" 
                 alt="TikTok" 
-                className="w-8 h-8 object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                className="w-10 h-10 object-contain opacity-70 hover:opacity-100 transition-opacity" 
               />
             </a>
             <a 
@@ -641,7 +641,7 @@ export default function App() {
               <img 
                 src="https://res.cloudinary.com/dmkx2uowd/image/upload/v1765390691/Dise%C3%B1o_sin_t%C3%ADtulo_6_t3kbqo.png" 
                 alt="LinkedIn" 
-                className="w-8 h-8 object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                className="w-10 h-10 object-contain opacity-70 hover:opacity-100 transition-opacity" 
               />
             </a>
           </div>
