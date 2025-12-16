@@ -420,7 +420,7 @@ export default function App() {
       <section id="resultados" className="py-24 px-4 bg-slate-900/30 border-y border-white/5">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="sticky top-24">
+            <div className="relative lg:sticky lg:top-24">
               <SectionHeader 
                 title="Resultados que pagan las facturas" 
                 subtitle="Deja de medir likes vacíos. Nosotros nos enfocamos en métricas que mueven tu carrera o negocio."
