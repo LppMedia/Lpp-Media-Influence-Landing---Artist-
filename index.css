@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020617;
+  color: white;
+}
+
+/* Hide scrollbar for cleaner look in some containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* --- Magic Bento Styles --- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.magic-bento-card {
+  position: relative;
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.magic-bento-card--border-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* width of the glow border */
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(var(--glow-color), var(--glow-intensity)) 0%,
+    transparent 100%
+  );
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.magic-bento-card__header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.magic-bento-card__icon {
+  font-size: 2rem;
+  color: #a78bfa;
+}
+
+.magic-bento-card__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  font-weight: 600;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.magic-bento-card__content {
+  z-index: 10;
+}
+
+.magic-bento-card__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.magic-bento-card__description {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.global-spotlight {
+  pointer-events: none; 
+  /* The inline styles in JS handle the rest, but ensuring z-index here */
+  z-index: 50;
+}
+
+/* Particle styling */
+.particle-container {
+  /* ensures particles are contained */
+  overflow: hidden; 
+}
+
+/* --- Scroll Reveal Styles --- */
+.scroll-reveal-text .word {
+  display: inline-block;
+  white-space: pre-wrap; /* Preserve spaces */
+}
