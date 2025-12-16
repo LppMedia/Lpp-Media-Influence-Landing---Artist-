@@ -110,7 +110,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
 
     return () => {
       // Kill ScrollTriggers created by this component instance
-      ScrollTrigger.getAll().forEach(trigger => {
+      ScrollTrigger.getAll().forEach((trigger: any) => {
         // Only kill triggers associated with this element to avoid nuking global triggers
         if (trigger.trigger === el) {
             trigger.kill();

@@ -165,7 +165,8 @@ export default function Aurora(props: AuroraProps) {
     }
     window.addEventListener('resize', resize);
 
-    const geometry = new Triangle(gl);
+    // Cast gl to any to avoid TypeScript errors with OGL types expecting renderer property
+    const geometry = new Triangle(gl as any);
     if (geometry.attributes.uv) {
       delete geometry.attributes.uv;
     }
@@ -175,7 +176,7 @@ export default function Aurora(props: AuroraProps) {
       return [c.r, c.g, c.b];
     });
 
-    program = new Program(gl, {
+    program = new Program(gl as any, {
       vertex: VERT,
       fragment: FRAG,
       uniforms: {
@@ -187,7 +188,7 @@ export default function Aurora(props: AuroraProps) {
       }
     });
 
-    const mesh = new Mesh(gl, { geometry, program });
+    const mesh = new Mesh(gl as any, { geometry, program });
     ctn.appendChild(gl.canvas as unknown as Node);
 
     let animateId = 0;
